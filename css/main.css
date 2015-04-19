@@ -1,0 +1,36 @@
+body {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    min-width: 800px;
+    min-height: 600px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+div#NavBar {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: crimson;
+}
+
+div#ConText {
+    position: absolute;
+    width: 100%;
+    background-color: #2647a0;
+    top: 60px;
+    bottom: 60px;
+    height: auto;
+}
+
+div#Address {
+    width: 100%;
+    background-color: chartreuse;
+    position: absolute;
+    height: 60px;
+    bottom: 0px;
+}

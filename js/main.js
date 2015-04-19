@@ -9,6 +9,7 @@ var background = "#000";
 var fontSetting = "20px Arial";
 var fontColor = "#DDD";
 var text;
+
 function init() {
     stage = new createjs.Stage('Game');
     stageHigh = stage.canvas.height;
@@ -47,8 +48,34 @@ function preload(manifestFile) {
 
 }
 
-function handleFileLoadeed() {
+function handleFileLoaded(event) {
+    var item = event.item;
+    var result = event.result;
 
+    switch (item.type) {
+        case createjs.AbstractLoader.CSS:
+            (document.head || document.getElementsByTagName("head")[0]).appendChild(result);
+            break;
+
+        case createjs.AbstractLoader.IMAGE:
+            break;
+
+        case createjs.AbstractLoader.JAVASCRIPT:
+            document.body.appendChild(result);
+            break;
+
+        case createjs.AbstractLoader.JSON:
+        case createjs.AbstractLoader.XML:
+            break;
+        case createjs.AbstractLoader.JSONP:
+            break;
+        case createjs.AbstractLoader.SOUND:
+            document.body.appendChild(result);
+            break;
+
+        case createjs.AbstractLoader.SVG:
+            break
+    }
 }
 
 
