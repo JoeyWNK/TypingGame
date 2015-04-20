@@ -7,13 +7,14 @@ echo "<link rel='stylesheet' href='css/main.css''>";
 
 </head>
 <body>
+
+<div id="ConText">
+
+</div>
 <div id="NavBar">
     <?php
 
     ?>
-</div>
-<div id="ConText">
-
 </div>
 <div id="Address">
     <?php
