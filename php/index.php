@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-echo "<link rel='stylesheet' href='css/main.css''>";
+echo "<link rel='stylesheet' href='../css/main.css''>";
 ?>
 
 <head>
@@ -15,18 +15,28 @@ echo "<link rel='stylesheet' href='css/main.css''>";
 <body>
 
 <div id="ConText">
-	<div id="Welcome"><p> Welcome to Typing Game! </p></div>
-	<div id="Play"><a href="play.index"><img src="" alt="PLAY"/></div>
+    <div id="Welcome"><p> Welcome to Typing Game! </p></div>
+    <div id="Play"><a href="game.php"> PLAY!</a></div>
 </div><!--end ConText-->
+
 <div id="NavBar">
-	<div id="LOGO"><h1><a href="index.html"><img src="img/logo_adflavor_footer.gif" alt="Typing Game" /></a></h1></div>
-    <div class="menuitems"><a href="game.php">Game</a></div>
-    <div class="menuitems"><a href="userprofile.html">UserProfile</a></div>
-   
+	<div id="LOGO">
+        <a href="index.php">
+           <b> Typing Game </b>
+        </a>
+    </div>
+    <div id="menus">
+        <div class="menuitems"><a href="index.php">Index</a></div>
+        <div class="menuitems"><a href="game.php">Game</a></div>
+        <div class="menuitems"><a href="user.php">User </a></div>
+        <div class="menuitems"><a href="about.php">About</a></div>
+
+    </div>
 </div><!--end NacBar-->
+
 <div id="Address">
     <div class="footer"><a href="index.html"></div>
-        <p>@ 2015 Razer. All rights reserved.</p><p><a href="about.html"target="top">About</a></p>
+        <p>@ 2015 Razer. All rights reserved.</p>
  
 
    
