@@ -163,6 +163,7 @@ div.blank2{
 }
 h1{
     font-size: 30px;
+    color: darkblue;
 }
 p{
     font-size: 25px;
@@ -173,21 +174,23 @@ h2{
 }
 div.label1{
     display:block;
-    border: solid;
+    border: none;
     position:absolute;
     column-width: 300px;
-    top: -30px;
+    top: -35px;
     left: 20px;
-    font-size: 40px;
+    font-size: 30px;
+    color: #2647a0;
 }
 div.label2{
     display: block;
-    border: solid;
+    border: none;
     position: absolute;
     column-width: 300px;
-    top: 10px;
+    top: 0px;
     left: 630px;
-    font-size: 40px;
+    font-size: 30px;
+    color: #2647a0;
 
 }
 

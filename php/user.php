@@ -7,17 +7,16 @@
 <div id="ConText">
   <div class="main">
     <div class="blank1">
-    <h1>________</h1>
     <h1>User</h1>
     <h1>Time</h1>
     <h1>Times</h1>
     <h1>Words</h1>
-    <h1>ERROR</h1>
+    <h1>Errors</h1>
     </div>
-    <div class="label1">Profile</div>
+    <div class="label1"><b>Profile</b></div>
     <div class="blank2">
     </div>
-    <div class="label2">Ranking</div>
+    <div class="label2"><b>Ranking</b></div>
   </div>
 </div>
 <div id="NavBar">
