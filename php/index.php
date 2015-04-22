@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <?php
 echo "<link rel='stylesheet' href='../css/main.css''>";
 ?>
@@ -15,7 +15,15 @@ echo "<link rel='stylesheet' href='../css/main.css''>";
 <body>
 
 <div id="ConText">
-    <div id="Welcome"><p> Welcome to Typing Game! </p></div>
+    <div id="Welcome">
+        <h1> Welcome to Typing Game! </h1>
+        <p> Do you want to know how fast your fingers can move?
+            </br>Do you want to know how chaotic your brain can mess with your fingers?
+            </br>
+            We happen to have a typing game for you.
+            </br>
+            Try it now!!</p>
+    </div>
     <div id="Play"><a href="game.php"> PLAY!</a></div>
 </div><!--end ConText-->
 
@@ -26,7 +34,6 @@ echo "<link rel='stylesheet' href='../css/main.css''>";
         </a>
     </div>
     <div id="menus">
-        <div class="menuitems"><a href="index.php">Index</a></div>
         <div class="menuitems"><a href="game.php">Game</a></div>
         <div class="menuitems"><a href="user.php">User </a></div>
         <div class="menuitems"><a href="about.php">About</a></div>
@@ -36,7 +43,7 @@ echo "<link rel='stylesheet' href='../css/main.css''>";
 
 <div id="Address">
     <div class="footer"><a href="index.html"></div>
-        <p>@ 2015 Razer. All rights reserved.</p>
+        <p2>@ 2015 Razer. All rights reserved.</p2>
  
 
    

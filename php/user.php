@@ -14,10 +14,10 @@
     <h1>Words</h1>
     <h1>ERROR</h1>
     </div>
+    <div class="label1">Profile</div>
     <div class="blank2">
-    <h2>Name Ranking</h2>
     </div>
-
+    <div class="label2">Ranking</div>
   </div>
 </div>
 <div id="NavBar">
@@ -37,6 +37,6 @@
 
 <div id="Address">
   <div class="footer"><a href="index.html"></div>
-  <p>@ 2015 Razer. All rights reserved.</p>
+  <h2>@ 2015 Razer. All rights reserved.</h2>
 </body>
 </html>
