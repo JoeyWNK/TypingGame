@@ -3,12 +3,12 @@
 <link rel="stylesheet" href="css/main.css">
 ;
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content="Typing Game is a online game which can help you improve your typing skills. "/>
-    <meta name="keywords" content="Typing Game, Typing skills, Razer"/>
-    <meta name="author" content="Razer"/>
-    <meta name="Copyright" content="Razer"/>
-    <meta name="robots" content="index, follow"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Typing Game is a online game which can help you improve your typing skills. " />
+	<meta name="keywords" content="Typing Game, Typing skills, Razer" />
+	<meta name="author" content="Razer" />
+	<meta name="Copyright" content="Razer" />
+	<meta name="robots" content="index, follow" />
 </head>
 <body>
 
@@ -24,8 +24,7 @@
             </br>
             <a href="game"><strong>Try it now!!</strong></a></p>
     </div>
-</div>
-<!--end ConText-->
+</div><!--end ConText-->
 
 <div id="NavBar">
     <link rel="stylesheet" href="css/button.css">
@@ -39,15 +38,13 @@
     $navbar->addTextButton("about", "About", "aboutbtn");
     $navbar->finish();
     ?>
-</div>
-<!--end NacBar-->
+</div><!--end NacBar-->
 
 <div id="Address">
     <div class="footer">
         <p>@ 2015 Razer. All rights reserved.</p>
     </div>
-</div>
-<!--end Address-->
+</div><!--end Address-->
 
 </body>
 </html>
