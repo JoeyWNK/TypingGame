@@ -6,7 +6,7 @@ var stage;
 var stageHigh;
 var stageWide;
 var background = "#000";
-var fontSetting = "20px Arial";
+var fontSetting = "10px Arial";
 var fontColor = "#DDD";
 var text;
 
@@ -18,11 +18,13 @@ function init() {
     //Alternatively use can also use the graphics property of the Shape class to renderer the same as above.
     var back = new createjs.Shape();
     back.graphics.beginFill(background).drawRect(0, 0, stageWide, stageHigh);
-    text = new createjs.Text("A", fontSetting, fontColor);
-    text.x = text.y = 50;
+    text = new createjs.Text("", fontSetting, fontColor);
+    text.x = text.y = 120;
 
-
-    stage.addChild(text);
+    underconstruction = new createjs.Text("Sorry: Under Coding", fontSetting, fontColor);
+    underconstruction.x = 90;
+    underconstruction.y = 40;
+    stage.addChild(underconstruction, text);
 
     stage.update();
     this.document.onkeydown = updateText;

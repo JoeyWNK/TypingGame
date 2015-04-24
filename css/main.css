@@ -1,8 +1,9 @@
-
 html {
-    background-color: navajowhite;
+
+    background-color: rgb(169, 169, 169);
 }
 body {
+    overflow: auto;
     position: fixed;
     top: 0px;
     bottom: 0px;
@@ -14,83 +15,59 @@ body {
     margin-top: 0px;
 }
 
-div#LOGO a, a:active,a:visited  {
-    position: absolute;
-    left: 20px;
-    top: 1px;
-    width: 500px;
-    height: 70px;
-    font-style: normal;
+div {
     display: block;
-    font-family: Lucida Grande;
-    font-size: 45px;
-    color: blanchedalmond;
-    text-decoration: none;
 }
-
 div#NavBar {
+    list-style-type: none;
+    line-height: 30px;
     position: absolute;
     top: 0px;
     width: 100%;
     height: 80px;
     text-align: left;
-    background: url("../images/nav1.jpg") repeat-x;
+    background-color: rgb(0, 0, 0);
+    background-image: -ms-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(0, 0, 0)), to(rgb(96, 96, 96)));
+    background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
+    background-image: -moz-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
+    background-repeat: repeat-x;
     border-radius: 0px 0px 40px 40px;
     -moz-border-radius: 0px 0px 40px 40px;
     -webkit-border-radius: 0px 0px 40px 40px;
     -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 1);
     box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-}
-div{
-    display: block;
-}
-div#menus{
-    width: 1000px;
-    float: right;
-    top: 10px;
+    border: 2px solid rgb(128, 128, 128);
 }
 
- .menuitems{
-     float: left;
-     margin-left: 35px;
- }
-
- .menuitems a{
-     width:90px;
-     height:30px;
-     left: 250px;
-     line-height:50px;
-     font-family: fantasy;
-     color: bisque;
-     margin:5px 10px;
-     font-style: normal;
-     font-size: 25px;
-     display:block;
-     text-align: center;
-     text-decoration:none;
+div#NavBar a#logo {
+    margin: 20px;
+    float: left;
+    text-decoration: none;
+    color: rgb(255, 250, 240);
+    font-family: "Freestyle Script", serif;
+    font-size: 40px;
 }
- .menuitems
- a:link    {color:khaki;}
- a:visited {color:khaki;}
- a:hover   {color:darksalmon;text-decoration: underline dotted}
- a:active  {color:yellow;}
 
-
-
+div#NavBar div.btn-group {
+    position: relative;
+    float: left;
+    top: 20px;
+}
 div#ConText {
-    background: rgba(234,205,158,1);
-    background: -moz-linear-gradient(left, rgba(234,205,158,1) 0%, rgba(234,205,158,1) 2%, rgba(184,145,81,1) 8%, rgba(234,205,158,1) 32%, rgba(234,205,158,1) 65%, rgba(163,126,67,1) 92%, rgba(223,193,144,1) 100%);
-    background: -webkit-gradient(linear,left top, right top, color-stop(0%, rgba(234,205,158,1)), color-stop(2%, rgba(234,205,158,1)), color-stop(8%, rgba(184,145,81,1)), color-stop(32%, rgba(234,205,158,1)), color-stop(65%, rgba(234,205,158,1)), color-stop(92%, rgba(163,126,67,1)), color-stop(100%, rgba(223,193,144,1)));
-    background: -webkit-linear-gradient(left, rgba(234,205,158,1) 0%, rgba(234,205,158,1) 2%, rgba(184,145,81,1) 8%, rgba(234,205,158,1) 32%, rgba(234,205,158,1) 65%, rgba(163,126,67,1) 92%, rgba(223,193,144,1) 100%);
-    background: -o-linear-gradient(left, rgba(234,205,158,1) 0%, rgba(234,205,158,1) 2%, rgba(184,145,81,1) 8%, rgba(234,205,158,1) 32%, rgba(234,205,158,1) 65%, rgba(163,126,67,1) 92%, rgba(223,193,144,1) 100%);
-    background: -ms-linear-gradient(left, rgba(234,205,158,1) 0%, rgba(234,205,158,1) 2%, rgba(184,145,81,1) 8%, rgba(234,205,158,1) 32%, rgba(234,205,158,1) 65%, rgba(163,126,67,1) 92%, rgba(223,193,144,1) 100%);
-    background: linear-gradient(to right, rgba(234,205,158,1) 0%, rgba(234,205,158,1) 2%, rgba(184,145,81,1) 8%, rgba(234,205,158,1) 32%, rgba(234,205,158,1) 65%, rgba(163,126,67,1) 92%, rgba(223,193,144,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eacd9e', endColorstr='#dfc190', GradientType=1 );
+    background: rgba(255, 255, 255, 1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(65%, rgba(245, 245, 245, 1)), color-stop(100%, rgba(226, 211, 187, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e2d3bb', GradientType=1);
     position: absolute;
     left: 5%;
     width: 90%;
-    top: 60px;
+    top: 80px;
     bottom: 60px;
     height: auto;
     -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
@@ -98,109 +75,16 @@ div#ConText {
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
     transition: background;
 }
-div#Welcome{
-    text-align: center;
-    width: 1000px;
-    padding: 40px 500px 500px 40px ;
-    font-size: xx-large;
-    font-family: fantasy;
-}
-div#Play{
-    position: absolute;
-    left: 500px;
-    top: 400px;
-    width: 500px;
-    height: 70px;
-    font-style: normal;
-    display: block;
-    font-family: fantasy;
-    font-size: xx-large;
-    font-color: dodgerblue;
-    text-decoration: none;
-}
-
-div.main{
-    position: absolute;
-    margin-left: 130px;
-    margin-right: 150px;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    height: 400px;
-    width: 950px;
-    border-radius: 18px 18px 18px 18px;
-    -moz-border-radius: 18px 18px 18px 18px;
-    -webkit-border-radius: 18px 18px 18px 18px;
-    border: 3px solid #f71845;
-    background:transparent;
-}
-div.blank1{
-    position: absolute;
-    margin-left: 20px;
-    margin-right: 450px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    height: 350px;
-    width:450px;
-    border-radius: 18px 18px 18px 18px;
-    -moz-border-radius: 18px 18px 18px 18px;
-    -webkit-border-radius: 18px 18px 18px 18px;
-    border: 3px none;
-    background:transparent;
-}
-div.blank2{
-    position: absolute;
-    margin-left: 485px;
-    margin-right: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    height: 350px;
-    width:435px;
-    border-radius: 18px 18px 18px 18px;
-    -moz-border-radius: 18px 18px 18px 18px;
-    -webkit-border-radius: 18px 18px 18px 18px;
-    border: 3px solid #f71845;
-    background:transparent;
-}
-h1{
-    font-size: 30px;
-    color: darkblue;
-}
-p{
-    font-size: 25px;
-}
-h2{
-    font-size: 20px;
-
-}
-div.label1{
-    display:block;
-    border: none;
-    position:absolute;
-    column-width: 300px;
-    top: -35px;
-    left: 20px;
-    font-size: 30px;
-    color: #2647a0;
-}
-div.label2{
-    display: block;
-    border: none;
-    position: absolute;
-    column-width: 300px;
-    top: 0px;
-    left: 630px;
-    font-size: 30px;
-    color: #2647a0;
-
-}
-
 div#Address {
     width: 100%;
     position: absolute;
-    left: 500px;
+    text-align: center;
     height: 60px;
-    text-align: left;
-    vertical-align: middle;
     bottom: 0px;
+    display: block;
+    text-decoration: none;
+    vertical-align: bottom;
+    color: rgb(0, 0, 0);
+    font-family: "Segoe UI", serif;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
 }
-
