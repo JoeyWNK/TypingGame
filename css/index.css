@@ -18,7 +18,7 @@ div#ConText p {
 
 div#ConText p strong, div#ConText p a {
     font-size: 50px;
-    font-family: "Freestyle Script", serif;
+    font-family: FontFree;
     color: rgb(220, 20, 60);
     text-decoration: none;
 }
