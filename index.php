@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="css/main.css">
-;
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="description" content="Typing Game is a online game which can help you improve your typing skills. " />
@@ -9,12 +7,15 @@
 	<meta name="author" content="Razer" />
 	<meta name="Copyright" content="Razer" />
 	<meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="css/main.css">
+    <script language="JavaScript" src="js/nav.js"></script>
 </head>
 <body>
 
 <div id="ConText">
     <link rel="stylesheet" href="css/index.css">
     <div>
+        <br>
         <h1> Welcome to Typing Game! </h1>
 
         <p> Do you want to know how fast your fingers can move?
@@ -27,18 +28,18 @@
 </div><!--end ConText-->
 
 <div id="NavBar">
-    <link rel="stylesheet" href="css/button.css">
-    <script src="js/bootstrap.min.js"></script>
-    <?php
-    include("php/NavigationBar.php");
-    new logo("#", "Typing Game", "logo");
-    $navbar = new TestNavigationBar("nav");
-    $navbar->addTextButton("game", "Game", "gamebtn");
-    $navbar->addTextButton("user", "Honor", "mebtn");
-    $navbar->addTextButton("about", "About", "aboutbtn");
-    $navbar->finish();
-    ?>
+    <div id="logo">
+        <a href="index.php"> <img src="images/logo.png">
+        </a>
+    </div>
+    <ul id="nav">
+        <li><a href="game/index.php"title="Typing Game">Game</a></li>
+        <li><a href="user/index.php"title="Typing Game">History</a></li>
+        <li><a href="about/index.php"title="Typing Game">About</a></li>
+        <li><a href="index.php"title="Typing Game">Log in</a></li>
+    </ul>
 </div><!--end NacBar-->
+
 
 <div id="Address">
     <div class="footer">

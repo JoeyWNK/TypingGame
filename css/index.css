@@ -5,20 +5,19 @@ div#ConText {
 }
 
 div#ConText h1 {
-
-    font-size: 50px;
+    font-size: 30px;
     color: rgb(38, 71, 160);
 }
 
 div#ConText p {
-    font-size: 30px;
-    color: rgb(169, 169, 169);
+    font-size: 20px;
+    color: #bd362f;
     line-height: 2.3;
 }
 
 div#ConText p strong, div#ConText p a {
-    font-size: 50px;
+    font-size: 30px;
     font-family: FontFree;
-    color: rgb(220, 20, 60);
+    color: #0088cc;
     text-decoration: none;
 }

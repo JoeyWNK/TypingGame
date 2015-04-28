@@ -2,6 +2,7 @@
 <head>
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script language="JavaScript" src="../js/nav.js"></script>
 </head>
 <body>
 <div id="ConText">
@@ -15,20 +16,18 @@
     </div>
 </div>
 <div id="NavBar">
-    <link rel='stylesheet' href='../css/button.css'
-    '>
-    <script src="../js/bootstrap.min.js"></script>
-    <?php
-    include("../php/NavigationBar.php");
-    new logo("../", "Typing Game", "logo");
-    $navbar = new TestNavigationBar("nav");
-    $navbar->addTextButton("../game", "Game", "gamebtn");
-    $navbar->addTextButton("../user", "Honor", "mebtn");
-    $navbar->addTextButton("../about", "About", "aboutbtn");
-    $navbar->finish();
-    ?>
-</div>
-<!--end NacBar-->
+    <div id="logo">
+        <a href="index.php">
+            <img src="../images/logo.png" alt="Typing Game">
+        </a>
+    </div>
+    <ul id="nav">
+        <li><a href="../game/index.php">Game</a></li>
+        <li><a href="../user/index.php">History</a></li>
+        <li><a href="../about/index.php">About</a></li>
+        <li><a href="../index.php">Log in</a></li>
+    </ul>
+</div><!--end NacBar-->
 
 <div id="Address">
     <div class="footer">
@@ -36,7 +35,7 @@
     </div>
 </div>
 <!--end Address-->
-
+</body>
 </html>
 <?php
 /**

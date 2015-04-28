@@ -7,9 +7,11 @@
     font-family: FontAdd;
     src: url("segoeuil.ttf");
 }
-html {
-    background-color: rgb(169, 169, 169);
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+    margin: 0; padding: 0; border: 0;
 }
+
 body {
     overflow: auto;
     position: fixed;
@@ -21,73 +23,68 @@ body {
     min-height: 600px;
     margin-bottom: 0px;
     margin-top: 0px;
+    background: #f5f0e0 url(../images/noise.png);
+
 }
 
-div {
-    display: block;
-}
+
+
 div#NavBar {
-    list-style-type: none;
-    line-height: 30px;
+    background: url(../images/bg.jpg) center top no-repeat;
+}
+
+div#logo {
+    float:left;
+    width:30px;
+    height:30px;
+    padding-top:0px;
+}
+div#logo img{
+    width: 280px;
+    height: 90px;
     position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 80px;
-    text-align: left;
-    background-color: rgb(0, 0, 0);
-    background-image: -ms-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(0, 0, 0)), to(rgb(96, 96, 96)));
-    background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
-    background-image: -moz-linear-gradient(top, rgb(0, 0, 0), rgb(96, 96, 96));
-    background-repeat: repeat-x;
-    border-radius: 0px 0px 40px 40px;
-    -moz-border-radius: 0px 0px 40px 40px;
-    -webkit-border-radius: 0px 0px 40px 40px;
-    -webkit-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 1);
-    box-shadow: 0px 10px 42px 0px rgba(0, 0, 0, 0.75);
-    border: 2px solid rgb(128, 128, 128);
+    margin:20px;
+
+}
+ul#nav {
+    width: 700px; margin: 0 auto; text-align: center; overflow: hidden;
+}
+ul#nav li {
+    float: left; list-style: none;
+}
+ul#nav li a {
+    display: block; width: 97px; height: 77px;
+    padding: 72px 0 0 0; margin: 0 32px 0 32px;
+    font: bold 16px Helvetica, Arial, Sans-Serif; text-transform: uppercase;
+    color: #9c5959; text-shadow: 0 1px 3px #c4bda6; text-decoration: none;
+    background: url(../images/label.png) 0 -149px no-repeat;
+}
+ul#nav li a:hover {
+    background: url(../images/label.png) 0 0 no-repeat;
+    color: #eee9d9; text-shadow: 0 2px 3px #4c2222;
+}
+ul#nav li a.js:hover {
+    background: url(../images/label.png) 0 -149px no-repeat;
 }
 
-div#NavBar a#logo {
-    margin: 20px;
-    float: left;
-    text-decoration: none;
-    color: rgb(255, 250, 240);
-    font-family: FontFree;
-    font-size: 40px;
-}
-
-div#NavBar div.btn-group {
-    position: relative;
-    float: left;
-    top: 20px;
-}
 div#ConText {
-    background: rgba(255, 255, 255, 1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(65%, rgba(245, 245, 245, 1)), color-stop(100%, rgba(226, 211, 187, 1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 65%, rgba(226, 211, 187, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e2d3bb', GradientType=1);
+    transition: background;
     position: absolute;
-    left: 5%;
-    width: 90%;
-    top: 80px;
-    bottom: 60px;
+    left: 15%;
+    width: 70%;
+    top: 150px;
+    bottom: 40px;
     height: auto;
     -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    transition: background;
+
 }
 div#Address {
     width: 100%;
     position: absolute;
     text-align: center;
-    height: 60px;
+    height: 30px;
     bottom: 0px;
     display: block;
     text-decoration: none;
