@@ -11,13 +11,11 @@
     <script language="JavaScript" src="js/nav.js"></script>
 </head>
 <body>
-
 <div id="ConText">
     <link rel="stylesheet" href="css/index.css">
     <div>
         <br>
         <h1> Welcome to Typing Game! </h1>
-
         <p> Do you want to know how fast your fingers can move?
             </br>Do you want to know how chaotic your brain can mess with your fingers?
             </br>
@@ -29,14 +27,15 @@
 
 <div id="NavBar">
     <div id="logo">
-        <a href="index.php"> <img src="images/logo.png">
+        <a href="#">
+            <img src="images/logo.png" alt="Typing Game">
         </a>
     </div>
     <ul id="nav">
-        <li><a href="game/index.php"title="Typing Game">Game</a></li>
-        <li><a href="user/index.php"title="Typing Game">History</a></li>
-        <li><a href="about/index.php"title="Typing Game">About</a></li>
-        <li><a href="index.php"title="Typing Game">Log in</a></li>
+        <li><a href="game" >game</a></li>
+        <li><a href="about">about</a></li>
+        <li><a href="user" >user</a></li>
+        <li><a href="#">log in</a></li>
     </ul>
 </div><!--end NacBar-->
 

@@ -11,7 +11,6 @@
 body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
     margin: 0; padding: 0; border: 0;
 }
-
 body {
     overflow: auto;
     position: fixed;
@@ -23,31 +22,41 @@ body {
     min-height: 600px;
     margin-bottom: 0px;
     margin-top: 0px;
-    background: #f5f0e0 url(../images/noise.png);
+    background:url("../images/noise.jpg");
 
 }
 
-
-
-div#NavBar {
-    background: url(../images/bg.jpg) center top no-repeat;
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+    margin: 0; padding: 0; border: 0;
 }
 
-div#logo {
-    float:left;
-    width:30px;
-    height:30px;
-    padding-top:0px;
+#logo{
+    position: fixed;
+    float: left;
+    height:150px;
+    width: 350px;
+    left: 30px;
+    top: 49px;
 }
-div#logo img{
-    width: 280px;
-    height: 90px;
-    position: absolute;
-    margin:20px;
+
+#ConText {
+    height: 800px;
+    background: url("../images/bg3.jpg") center top   ;
+    width: 100%;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
 
 }
+
 ul#nav {
+    position: fixed;
+    left: 350px;
     width: 700px; margin: 0 auto; text-align: center; overflow: hidden;
+    background: url("../images/nav.jpg") no-repeat center;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0,0,0.35);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0,0.35);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.35);
 }
 ul#nav li {
     float: left; list-style: none;
@@ -75,9 +84,6 @@ div#ConText {
     top: 150px;
     bottom: 40px;
     height: auto;
-    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
 
 }
 div#Address {

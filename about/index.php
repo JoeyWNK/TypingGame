@@ -8,6 +8,7 @@
 <div id="ConText">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <div id="Info">
+        <br>
         <h1> About </h1>
 
         <p> Visit GitHub to see our latest work!
@@ -17,15 +18,15 @@
 </div>
 <div id="NavBar">
     <div id="logo">
-        <a href="index.php">
+        <a href="../">
             <img src="../images/logo.png" alt="Typing Game">
         </a>
     </div>
     <ul id="nav">
-        <li><a href="../game/index.php">Game</a></li>
-        <li><a href="../user/index.php">History</a></li>
-        <li><a href="../about/index.php">About</a></li>
-        <li><a href="../index.php">Log in</a></li>
+        <li><a href="../game">Game</a></li>
+        <li><a href="../user">History</a></li>
+        <li><a href="../about">About</a></li>
+        <li><a href="../">Log in</a></li>
     </ul>
 </div><!--end NacBar-->
 

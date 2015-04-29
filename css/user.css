@@ -1,5 +1,6 @@
 div#UserInfo {
-
+    position: fixed;
+    left: 33%;
     float: left;
     min-width: 330px;
     margin: 35px;
