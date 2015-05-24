@@ -1,6 +1,7 @@
 /**
  * Created by Administrator on 2015/4/28.
  */
+
 (function($) {
     if(!document.defaultView || !document.defaultView.getComputedStyle){ // IE6-IE8
         var oldCurCSS = jQuery.curCSS;

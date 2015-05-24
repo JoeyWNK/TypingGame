@@ -8,7 +8,8 @@
 	<meta name="Copyright" content="Razer" />
 	<meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="css/main.css">
-    <script language="JavaScript" src="js/nav.js"></script>
+    <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript"></script>
 </head>
 <body>
 <div id="ConText">
@@ -17,10 +18,10 @@
         <br>
         <h1> Welcome to Typing Game! </h1>
         <p> Do you want to know how fast your fingers can move?
-            </br>Do you want to know how chaotic your brain can mess with your fingers?
-            </br>
+            <br/>Do you want to know how chaotic your brain can mess with your fingers?
+            <br/>
             We happen to have a typing game for you.
-            </br>
+            <br/>
             <a href="game"><strong>Try it now!!</strong></a></p>
     </div>
 </div><!--end ConText-->
@@ -32,6 +33,7 @@
         </a>
     </div>
     <ul id="nav">
+        <link rel='stylesheet' href='js/nav.js'>
         <li><a href="game" >game</a></li>
         <li><a href="about">about</a></li>
         <li><a href="user" >user</a></li>

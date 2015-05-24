@@ -1,3 +1,6 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+    margin: 0; padding: 0;
+}
 @font-face {
     font-family: FontFree;
     src: url("FREESCPT.TTF");
@@ -8,55 +11,38 @@
     src: url("segoeuil.ttf");
 }
 
-body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
-    margin: 0; padding: 0; border: 0;
-}
 body {
     overflow: auto;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     min-width: 800px;
     min-height: 600px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
     background:url("../images/noise.jpg");
 
 }
 
-body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
-    margin: 0; padding: 0; border: 0;
-}
-
 #logo{
-    position: fixed;
+    position: absolute;
     float: left;
     height:150px;
-    width: 350px;
-    left: 30px;
-    top: 49px;
-}
-
-#ConText {
-    height: 600px;
-    background: url("../images/bg3.jpg") center top no-repeat   ;
-    width: 100%;
-    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 1);
-
+    width: 200px;
+    left: 100px;
+    top: 25px;
 }
 
 ul#nav {
-    position: fixed;
-    left: 350px;
+    position: absolute;
+    left: 25%;
     width: 700px; margin: 0 auto; text-align: center; overflow: hidden;
     background: url("../images/nav.jpg") no-repeat center;
-    -webkit-box-shadow: 0px 10px 25px 0px rgba(0, 0,0,0.35);
-    -moz-box-shadow: 0px 10px 25px 0px rgba(0, 0, 0,0.35);
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 1px 10px 25px 1px rgba(0, 0,0,0.35);
+    -moz-box-shadow: 1px 10px 25px 1px rgba(0, 0, 0,0.35);
+    box-shadow: 1px 10px 25px 1px rgba(0, 0, 0, 0.35);
 }
 ul#nav li {
     float: left; list-style: none;
@@ -83,7 +69,10 @@ div#ConText {
     width: 70%;
     top: 150px;
     bottom: 40px;
-    height: auto;
+    background: url("../images/bg3.jpg") center top no-repeat   ;
+    -webkit-box-shadow: 1px 10px 25px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 10px 25px 1px rgba(0, 0, 0, 1);
+    box-shadow: 1px 10px 25px 1px rgba(0, 0, 0, 1);
 
 }
 div#Address {
@@ -91,7 +80,7 @@ div#Address {
     position: absolute;
     text-align: center;
     height: 30px;
-    bottom: 0px;
+    bottom: 1px;
     display: block;
     text-decoration: none;
     vertical-align: bottom;
