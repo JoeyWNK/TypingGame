@@ -7,12 +7,20 @@
  */
 session_start();
 
+//匹配sessionid，若成功，返回uid
 
 function USERLOGIN($username, $password){
-    //匹配sessionid，若成功，返回uid
-    $uid = GETLOGIN($username, $password);//判断username和password是否匹配
+
+    //判断username和password是否匹配
+
+    $uid = GETLOGIN($username, $password);
+
     if ($uid){
-        REGSESSION(session_id(),$uid);//给查询成功的uid匹配相应的sessionid
+
+        //给查询成功的uid匹配相应的sessionid
+
+        REGSESSION(session_id(),$uid);
+
         return $uid;
     }
     return null;
@@ -20,13 +28,17 @@ function USERLOGIN($username, $password){
 
 
 function ISLOGIN($sessionid){
+
     //判断是否已经登陆
+
     return CHECKSESSION($sessionid);
 
 }
 
 function GETUID(){
+
     //向上提供uid
+
     return ISLOGIN(session_id());
 
 }
