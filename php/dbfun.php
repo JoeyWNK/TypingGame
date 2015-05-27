@@ -10,9 +10,9 @@
 function USERCHECK($username){
     mysqli_select_db(H120008_WEB);
     $query = "SELECT * From 'User' WHERE name='".$username."';";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
     if($result) {
-        $row = mysql_fetch_array(MYSQL_NUM);
+        $row = mysqli_fetch_array(MYSQL_NUM);
         if ($row > 0) {
             return true;
         }return false;
@@ -23,7 +23,7 @@ function USERCHECK($username){
 function USERREGISTER ($username,$password){
     mysqli_select_db(H120008_WEB);
     $query = "INSERT INTO 'User' (username,password) values ($username,$password);";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if ($result){
         return true;
@@ -34,10 +34,10 @@ function USERREGISTER ($username,$password){
 function GETLOGIN ($username,$password){
 	mysqli_select_db(H120008_WEB);   
  $query = "SELECT uid from 'User' WHERE username='".$username."'and password='".$password."'";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if($result){
-        $row = mysql_fetch_array($result);
+        $row = mysqli_fetch_array($result);
         if ($row > 0){
             return uid;
         }return NULL;
@@ -57,10 +57,10 @@ function REGSESSION($sessionid,$uid){
 function GETDATA($uid){
 	mysqli_select_db(H120008_WEB);
     $query = "SELECT total, error, words FROM 'User' WHERE uid ='$uid';";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if ($result){
-        $row = mysql_fetch_array($result);
+        $row = mysqli_fetch_array($result);
         if ($row > 0){
             echo ("Total:".total."Error".error."Words".words);
         }
@@ -71,10 +71,10 @@ function GETDATA($uid){
 function CHECKSESSION($sessionid){
 	mysqli_select_db(H120008_WEB);
     $query = "SELECT uid FROM UserSession WHERE sessionid='".$sessionid."';";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if($result){
-        $row = mysql_fetch_array($result);
+        $row = mysqli_fetch_array($result);
         if ($row > 0 ){
             return uid;
         }
@@ -85,7 +85,7 @@ function CHECKSESSION($sessionid){
 function LOGOUT($uid){
 	mysqli_select_db(H120008_WEB);
     $query = "DELETE sessionid, uid FROM UserSession WHERE uid='".$uid."'";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if($result){
         return true;
@@ -97,7 +97,7 @@ function LOGOUT($uid){
 function GETGAMETEXT($textid){
 	mysqli_select_db(H120008_WEB);
     $query = "SELECT text FROM Text WHERE tid='".$textid."';";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if($result){
         return text;
@@ -108,13 +108,13 @@ function GETGAMETEXT($textid){
 function SETDATA($uid,$error,$words,$time){
 	mysqli_select_db(H120008_WEB);
     $query = "SELECT * FROM 'User'WHERE uid='".$uid."';";
-    $result = mysql_query($query);
+    $result = mysqli_query($query);
 
     if($result){
-        $row = mysql_fetch_array($result);
+        $row = mysqli_fetch_array($result);
         $sql = "UPDATE 'User' SET total=".($total+$row['total']).",words=".($words+$row['words']).",error=".($error+$row['error']).";";
 
-        $target = mysql_query($sql);
+        $target = mysqli_query($sql);
         return true;
     }return false;
 };
