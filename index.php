@@ -1,3 +1,6 @@
+<?php
+include "SessionMan.php"; 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,7 @@
 	<meta name="Copyright" content="Razer" />
 	<meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="css/main.css">
-    <script language="JavaScript" src="js/nav.js"></script>
+    <script language="JavaScript" src="js/jquery.min.js"></script>
 </head>
 <body>
 <div id="ConText">
@@ -35,7 +38,7 @@
         <li><a href="game" >game</a></li>
         <li><a href="about">about</a></li>
         <li><a href="user" >user</a></li>
-        <li><a href="#">log in</a></li>
+        <li><a href="#" id="loginBtn">log in</a></li>
     </ul>
 </div><!--end NacBar-->
 
@@ -46,6 +49,54 @@
     </div>
 </div><!--end Address-->
 
+<div id="login_bg" class ="login_bg" style="display:none" ><div>
+
+    <div class="container">
+        <div class="signup_forms">
+        <div id="signup_forms_container" class="signup_forms_container">
+           <form class="signup_form_form" id="sign_form">
+                <div class="signup_account" id="signup_account">
+                <div class="form_user">
+             <span class="form_user">
+         <input type="text" name="Username" placeholder="Username" id="signup_username">
+             </span>
+            </div>
+          <div class="form_password">
+          <input type="password" name="password" placeholder="Password" id="signup_password">
+           </div>
+          </div>
+         </div>
+         <input type="button" id="signin"value="Log in">
+         <input type="button" id="signup"value="Register">
+
+           </div>
+          </form>
+         </div>
+        </div>
+
+    <link rel="stylesheet" href="css/login.css">
+<script language="JavaScript">
+function login(){
+$("#login_bg").css({
+'display': 'block',
+'position': 'absolute',
+'padding': '17px',
+'background-color': 'rgb(246, 239, 229)',
+'margin': '20px',
+'top': '40%',
+'left': '36%',
+'border': '1px solid black',
+'box-shadow': '0px 5px 60px 0px #000'
+});
+
+}
+$("#loginBtn").click(function(){
+login()});
+$("#signup").click(function(){
+$.post('login.php',{action:'up',name:$("#signup_username").val(),pass:$("#signup_password").val()});})
+$("#signin").click(function(){
+$.post('login.php',{action:'in',name:$("#signup_username").val(),pass:$("#signup_password").val()});})
+</script>
 </body>
 </html>
 <?php
