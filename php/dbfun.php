@@ -8,7 +8,7 @@
 
 //检查username是否存在，存在返回true，不存在返回false
 function USERCHECK($username){
-    mysql_select_db(H120008_WEB);
+    mysqli_select_db(H120008_WEB);
     $query = "SELECT * From 'User' WHERE name='".$username."';";
     $result = mysql_query($query);
     if($result) {
@@ -21,7 +21,7 @@ function USERCHECK($username){
 
 //注册用户，成功返回true，不成功返回false
 function USERREGISTER ($username,$password){
-    mysql_select_db(H12000816_WEB);
+    mysqli_select_db(H120008_WEB);
     $query = "INSERT INTO 'User' (username,password) values ($username,$password);";
     $result = mysql_query($query);
 
@@ -32,7 +32,8 @@ function USERREGISTER ($username,$password){
 
 //向数据库检查用户名密码是否匹配，匹配返回uid，不匹配返回null
 function GETLOGIN ($username,$password){
-    $query = "SELECT uid from 'User' WHERE username='".$username."'and password='".$password."'";
+	mysqli_select_db(H120008_WEB);   
+ $query = "SELECT uid from 'User' WHERE username='".$username."'and password='".$password."'";
     $result = mysql_query($query);
 
     if($result){
@@ -45,6 +46,7 @@ function GETLOGIN ($username,$password){
 
 //向sessionid注册一个uid，boolean
 function REGSESSION($sessionid,$uid){
+	mysqli_select_db(H120008_WEB);
     if($sessionid){
         $query = "INSERT INTO UserSession (sid) values ($sessionid);";
         return true;
@@ -53,6 +55,7 @@ function REGSESSION($sessionid,$uid){
 
 //返回对应uid的字符串
 function GETDATA($uid){
+	mysqli_select_db(H120008_WEB);
     $query = "SELECT total, error, words FROM 'User' WHERE uid ='$uid';";
     $result = mysql_query($query);
 
@@ -66,6 +69,7 @@ function GETDATA($uid){
 
 //查询sessionid对应的uid， 返回uid
 function CHECKSESSION($sessionid){
+	mysqli_select_db(H120008_WEB);
     $query = "SELECT uid FROM UserSession WHERE sessionid='".$sessionid."';";
     $result = mysql_query($query);
 
@@ -79,6 +83,7 @@ function CHECKSESSION($sessionid){
 
 //删除sessionid, uid
 function LOGOUT($uid){
+	mysqli_select_db(H120008_WEB);
     $query = "DELETE sessionid, uid FROM UserSession WHERE uid='".$uid."'";
     $result = mysql_query($query);
 
@@ -90,6 +95,7 @@ function LOGOUT($uid){
 
 //返回对应序号的文章
 function GETGAMETEXT($textid){
+	mysqli_select_db(H120008_WEB);
     $query = "SELECT text FROM Text WHERE tid='".$textid."';";
     $result = mysql_query($query);
 
@@ -100,6 +106,7 @@ function GETGAMETEXT($textid){
 
 //记录当前游戏结果，boolean
 function SETDATA($uid,$error,$words,$time){
+	mysqli_select_db(H120008_WEB);
     $query = "SELECT * FROM 'User'WHERE uid='".$uid."';";
     $result = mysql_query($query);
 
