@@ -75,23 +75,19 @@ include "SessionMan.php";
         </div>
 
     <link rel="stylesheet" href="css/login.css">
+</div>
+<div id="shadow"></div>
 <script language="JavaScript">
-function login(){
-$("#login_bg").css({
-'display': 'block',
-'position': 'absolute',
-'padding': '17px',
-'background-color': 'rgb(246, 239, 229)',
-'margin': '20px',
-'top': '40%',
-'left': '36%',
-'border': '1px solid black',
-'box-shadow': '0px 5px 60px 0px #000'
-});
-
-}
+$("#shadow").hide();
+$("#login_bg").hide();
 $("#loginBtn").click(function(){
-login()});
+$("#login_bg").show();
+$("#shadow").show();
+$("#shadow").click(function(){
+$("#shadow").hide();
+$("#login_bg").hide();
+});
+});
 $("#signup").click(function(){
 $.post('login.php',{action:'up',name:$("#signup_username").val(),pass:$("#signup_password").val()});})
 $("#signin").click(function(){
