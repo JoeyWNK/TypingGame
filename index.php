@@ -98,7 +98,7 @@ $.post('login.php',{action:'in',name:$("#signup_username").val(),pass:$("#signup
 <?php
 /**
  * Created by IntelliJ IDEA.
- * User: nk
+ * User: ives
  * Date: 2015/4/17
  * Time: 17:17
  */

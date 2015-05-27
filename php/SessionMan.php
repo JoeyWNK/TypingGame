@@ -6,7 +6,7 @@
  * Time: 23:12
  */
 session_start();
-include"DataMan.php";
+include"dbfun.php";
 //匹配sessionid，若成功，返回uid
 
 function USERLOGIN($username, $password){
@@ -14,7 +14,7 @@ function USERLOGIN($username, $password){
     //判断username和password是否匹配
 
     $uid = GETLOGIN($username, $password);
-
+echo $uid.">";
     if ($uid){
 
         //给查询成功的uid匹配相应的sessionid

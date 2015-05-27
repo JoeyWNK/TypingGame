@@ -1,7 +1,9 @@
-<?php 
+<?php
+
+include "php/SessionMan.php";
 if (isset($_POST['action'])){
 if ($_POST['action'] === 'up'){
-if (USERCHECK($_POST['name'])){
+if (!USERCHECK($_POST['name'])){
 if (USERREGISTER($_POST['name'],$_POST['pass'])){
 die ('{"re":true,"action":"up"}');
 }
