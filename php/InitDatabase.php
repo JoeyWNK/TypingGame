@@ -17,6 +17,8 @@ else
 
 mysql_select_db("H120008_WEB", $con);
 $sql = "CREATE User Razer;";
+mysql_query($sql,$con);
+
 $sql = "CREATE TABLE User
 (
 uid int AUTO_INCREMENT NOT NULL,
@@ -51,6 +53,21 @@ UNIQUE KEY `tid`(`tid`)
 );";
 mysql_query($sql,$con);
 
+$sql = "GRANT insert,select,update on H120008_WEB.`User` to Razer IDENTIFIED BY 'razer';";
+if (mysql_query($sql,$con))
+ echo "table User done";
+else
+ echo mysql_error();
+$sql = "GRANT insert,select,delete on H120008_WEB.`UserSession` to Razer IDENTIFIED BY 'razer';";
+if (mysql_query($sql,$con))
+ echo "table Session done";
+else
+ echo mysql_error();
+$sql = "GRANT select on H120008_WEB.`Text` to Razer IDENTIFIED BY 'razer';";
+if (mysql_query($sql,$con))
+ echo "table Text done";
+else
+ echo mysql_error();
 mysql_close($con);
 echo "Done";
 
