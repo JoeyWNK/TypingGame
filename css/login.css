@@ -1,0 +1,92 @@
+<style type="text/css">
+		body
+		{
+			font: normal 14px/1.4 "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+		}
+		div
+		{
+			display:block;
+		}
+		a
+		{
+			text-decoration:none;
+			opacity: 1;
+			color: #fff;
+		 }
+		 input,button{ outline:none; }
+		::-moz-focus-inner{border:0px;}   
+               
+                 .login_bg
+                         {
+			position:relative;
+			top: 180px;
+			left: 320px;
+			width:500px;
+                        height:334px;    
+                        background-image:url(images/007.jpg);
+			background-size:cover;
+        }
+		
+                .container {
+			position:relative;
+	                bottom:50px;
+                        left:430px;
+                        width:260px;
+			
+                         
+                 }
+		
+		#subheading 
+		{
+		        position: relative;
+		        width: 517px;
+		        left: 50%;
+		        margin: 10px 0 16px -258px;
+		        font-size: 15px;
+		        font-weight: normal;
+		        color: #fff;
+		        text-align: center;
+		}
+		.signup_forms
+		{
+			width:260px;
+			height:145px;	
+		}
+		.signup_forms_container
+		{
+			width:260px;
+			
+			overflow: hidden;
+			background: #fff;
+			border-radius:3px;	
+		}
+		.form_user,.form_password
+		{
+			width:260px;
+			height:40px;
+			margin:0px;
+        	        padding:0px;
+			border:0px;	
+		}
+		.form_password{border-top: 1px solid #e3e3e3;}
+		.signup_forms input
+		{
+			padding: 11px 10px 11px 13px;
+			width: 100%;
+			margin:0px;
+        	        background: 0;
+			font: 16px/1.4 "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+			border:0px;	
+		}
+		#signup_forms_submit{
+		        margin-top:8px;		
+		        width:126px;
+		        height:45px;
+		        background:#529ECC;
+		        border:0px;
+		        border-radius:3px;
+		        cursor:pointer;     
+		 }
+		
+		
+    </style>
