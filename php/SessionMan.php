@@ -6,7 +6,7 @@
  * Time: 23:12
  */
 session_start();
-
+include"DataMan.php";
 //∆•≈‰sessionid£¨»Ù≥…π¶£¨∑µªÿuid
 
 function USERLOGIN($username, $password){
