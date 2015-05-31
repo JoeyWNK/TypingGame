@@ -4,12 +4,12 @@ include "php/SessionMan.php";
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Typing Game is a online game which can help you improve your typing skills. " />
-	<meta name="keywords" content="Typing Game, Typing skills, Razer" />
-	<meta name="author" content="Razer" />
-	<meta name="Copyright" content="Razer" />
-	<meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Typing Game is a online game which can help you improve your typing skills. " />
+  <meta name="keywords" content="Typing Game, Typing skills, Razer" />
+  <meta name="author" content="Razer" />
+  <meta name="Copyright" content="Razer" />
+  <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="css/main.css">
     <script language="JavaScript" src="js/jquery.min.js"></script>
 </head>
@@ -87,11 +87,64 @@ $("#shadow").hide();
 $("#login_bg").hide();
 });
 });
-$("#signup").click(function(){
-$.post('login.php',{action:'up',name:$("#signup_username").val(),pass:$("#signup_password").val()});})
-$("#signin").click(function(){
-$.post('login.php',{action:'in',name:$("#signup_username").val(),pass:$("#signup_password").val()});})
-
+$("#signup").click(
+  function(){
+    $.post('login.php',
+           {action:'up',
+            name:$("#signup_username").val(),
+            pass:$("#signup_password").val()
+           },
+           function(data,status){
+                var res = eval('('+data+')');
+                if (res.re){
+                   alert("Sign up success");
+                   $("#shadow").hide();
+                   $("#login_bg").hide();
+                } else {
+                   alert("Sign up fail"+status);
+                }
+             
+           }
+     );
+  }
+);
+$("#signin").click(
+  function(){
+    $.post('login.php',
+           {action:'in',
+            name:$("#signup_username").val(),
+            pass:$("#signup_password").val()
+           },
+           function(data,status){
+                var res = eval('('+data+')');
+                if (res.re){
+                   alert("Sign in success");
+                   history.go(0);
+                } else {
+                   alert("Sign in fail"+status);
+                }
+             
+           }
+   );
+  }
+);
+$("#logoutBtn").click(
+  function(){
+    $.post('login.php',
+           {action:'out'},
+           function(data,status){
+                var res = eval('('+data+')');
+                if (res.re){
+                   alert("Success");
+                   history.go(0);
+                } else {
+                   alert("Log out fail"+status);
+                }
+             
+           }
+   );
+  }
+);
 
 
 

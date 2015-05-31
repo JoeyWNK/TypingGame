@@ -46,8 +46,8 @@ $result = $mysqli->query("SELECT uid from `User` WHERE name='".$username."'and p
 
 //向sessionid注册一个uid，boolean
 function REGSESSION($sessionid,$uid){
-$mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");echo "2";
-    if($sessionid){echo "3";
+$mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");
+    if($sessionid){
        $result = $mysqli ->query("INSERT INTO `UserSession` (uid,sid) values ('".$uid."','".$sessionid."');");
         return true;
     }return false;
@@ -61,7 +61,7 @@ $mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");
     if ($result){
         $row = mysqli_fetch_array($result);
         if ($row > 0){
-            echo "('Total':".$row['total'].",'Error':".$row['error'].",'Words':".$row['words'].")";
+            return "('Total':".$row['total'].",'Error':".$row['error'].",'Words':".$row['words'].")";
         }
     }
 };
@@ -69,24 +69,28 @@ $mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");
 //查询sessionid对应的uid， 返回uid
 function CHECKSESSION($sessionid){
 $mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");
-    $result = $mysqli->query("SELECT uid FROM UserSession WHERE sessionid='".$sessionid."';");
+    $result = $mysqli->query("SELECT uid FROM UserSession WHERE sid='".$sessionid."';");
     
 
     if($result){
         $row = mysqli_fetch_array($result);
-        if ($row > 0 ){
-            return uid;
+        if ($row){
+            return $row['uid'];
         }
     }
+    return null;
 };
 
 //删除sessionid, uid
 function LOGOUT($uid){
 $mysqli =new mysqli("localhost","Razer","razer","H120008_WEB");
-    $result = $mysqli->query("DELETE sessionid, uid FROM UserSession WHERE uid='".$uid."'");
+    $result = $mysqli->query("DELETE FROM UserSession WHERE uid=".$uid.";");
         if($result){
         return true;
-    }return false;
+    } else {
+       echo $mysqli->error;
+    }
+    return false;
 
 };
 

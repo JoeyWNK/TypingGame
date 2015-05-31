@@ -14,13 +14,12 @@ function USERLOGIN($username, $password){
     //判断username和password是否匹配
 
     $uid = GETLOGIN($username, $password);
-echo $uid.">";
     if ($uid){
 
         //给查询成功的uid匹配相应的sessionid
 
         REGSESSION(session_id(),$uid);
-
+	$_SESSION['username'] = $username;
         return $uid;
     }
     return null;
