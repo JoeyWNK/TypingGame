@@ -36,7 +36,17 @@ include "php/SessionMan.php";
     </div>
     <ul id="nav">
      <?php
-     include "php/nav.php";
+        if (ISLOGIN(session_id())){
+       echo'<li><a href=game>GAME</a></li>';
+       echo'<li><a href=about>ABOUT</a></li>';
+       echo'<li><a href=user>USER</a></li>';
+       echo'<li><a href="#" id="logoutBtn">lOG OUT('.$_SESSION['username'].')</a></li>';
+   }else {
+       echo'<li><a href=game>GAME</a></li>';
+       echo'<li><a href=about>ABOUT</a></li>';
+       echo'<li><a href=user>USER</a></li>';
+       echo'<li><a href="#" id="loginBtn">lOG IN</a></li>';
+   }
      ?>
     </ul>
 </div><!--end NacBar-->
@@ -145,11 +155,6 @@ $("#logoutBtn").click(
    );
   }
 );
-
-
-
-
-
 </script>
 </body>
 </html>
