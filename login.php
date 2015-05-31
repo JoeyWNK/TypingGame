@@ -16,3 +16,8 @@ die ('{"re":true,"action":"in"}');
 }
 die ('{"re":false"}');
 }
+$uid=ISLOGIN(session_id());
+if(LOGOUT($uid)){
+    die('{"re":true,"}');
+}
+die('{"re":false"}');
