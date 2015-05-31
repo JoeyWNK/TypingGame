@@ -1,3 +1,6 @@
+<?php
+include "../php/SessionMan.php";
+?>
 <html>
 <head>
   <title>User Profile</title>
@@ -24,10 +27,9 @@
     </a>
   </div>
   <ul id="nav">
-    <li><a href="../game">Game</a></li>
-    <li><a href="../user">History</a></li>
-    <li><a href="../about">About</a></li>
-    <li><a href="../">Log in</a></li>
+    <?php
+    include "../php/nav.php";
+    ?>
   </ul>
 </div><!--end NacBar-->
 
