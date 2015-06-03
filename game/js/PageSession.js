@@ -11,7 +11,6 @@ function GETUSER() {
     return {
         "userinfo": {
             "name": "Joey",
-            "record": [{"date": "2015,5,5", "time": 300, "words": 100, "total_pressed": 700, "correct_pressed": 600}],
             "info": {"level": 2, "bonjor": "Hi, beginner~"}
         }
     };
@@ -21,11 +20,13 @@ function GETUSER() {
  * To begin a GAME
  * @diff int
  * @level int
- * @returns obj A JSONObject with text and time limited
+ * @returns obj A JSONObject with showingtext and time limited
  * */
 function GETGAME(diff, level) {
     return {
-        "text": "Have a nice day~",
+        "text": "Have a nice day~uyrdfjkgfdhyddyjudfbnkjyfcjy",
         "time": 30000
     };
 }
+
+

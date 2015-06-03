@@ -44,10 +44,8 @@ function ConvertKeyCodeToChar(keycode, isShift) {
         switch (keycode) {
             case 13:
                 return '\n';
-
             case 32:
                 return ' ';
-
             case 186:
                 return ';';
             case 187:
@@ -62,7 +60,6 @@ function ConvertKeyCodeToChar(keycode, isShift) {
                 return '/';
             case 192:
                 return '`';
-
             case 219:
                 return '[';
             case 220:
@@ -71,7 +68,7 @@ function ConvertKeyCodeToChar(keycode, isShift) {
                 return ']';
             case 222:
                 return '\'';
-
         }
+        return '';
     }
 }
